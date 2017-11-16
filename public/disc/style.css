@@ -1,0 +1,47 @@
+#disc-table {
+    width:100%;
+}
+.center {
+    text-align:center;
+}
+.answer {
+    margin:0px 10px;
+}
+#question h3 {
+    min-height:100px;
+}
+#question {
+    text-align:center;
+}
+#disc-intro, #question, #results {
+    padding:20px;
+}
+span[data-answer='1'], span[data-answer='1']:hover {
+    background:#3333cc;
+    border-color:#3333cc;
+}
+span[data-answer='2'], span[data-answer='2']:hover {
+    background:#6633cc;
+    border-color:#6633cc;
+}
+span[data-answer='3'], span[data-answer='3']:hover {
+    background:#996699;
+    border-color:#996699;
+}
+span[data-answer='4'], span[data-answer='4']:hover {
+    background:#d9864f;
+    border-color:#d9864f;
+}
+span[data-answer='5'], span[data-answer='5']:hover {
+    background:#ff9933;
+    border-color:#ff9933;
+}
+
+#question .btn {
+    color:#fff !important;
+    text-shadow:none;
+}
+
+#question .btn:hover {
+    box-shadow: none;
+}
