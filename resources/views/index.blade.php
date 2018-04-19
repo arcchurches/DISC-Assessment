@@ -1,29 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>DISC & Spiritual Profile | Powered by ARC</title>
-    <meta name="keywords" content="spiritual gifts, disc test, profile, leadership style, spiritual gifts test" />
+@extends('layouts.main')
 
-    <!-- Framework Stylesheets -->
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-
-    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|Oswald:400,300,700' rel='stylesheet' type='text/css'>
-    <link href="/disc/style.css" rel="stylesheet" >
-
-    <!-- Scripts -->
-    <script type="text/javascript" charset="utf-8" src="/disc/js/jquery-1.8.3.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/disc/js/modernizr-2.6.2.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/disc/js/jquery.formalize.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/disc/js/superfish.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/disc/js/jquery.validate.min.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/disc/js/jquery.controls.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/disc/js/jquery.form.js"></script>
-    <script type="text/javascript" charset="utf-8" src="/disc/js/main.js"></script>
-
+@section('content')
     <script type="text/javascript">
         $(document).ready(function() {
             var question = $("#question");
@@ -177,11 +154,6 @@
 
         });
     </script>
-
-
-</head>
-
-<body>
     <div class="text-center">
         @if(!empty($params['organization']->logo_url))
             <img style="max-width: 300px;" src="{{ $params['organization']->logo_url }}">
@@ -191,8 +163,8 @@
         @endif
     </div>
     <div id="disc-intro">
-        <h1>The Personality Profile will help you discover and develop your leadership style.</h1>
-        <h2>It is with your personality that you lead and influence others.</h2>
+        <p><strong>The Personality Profile will help you discover and develop your leadership style.</strong></p>
+        <p>It is with your personality that you lead and influence others.</p>
         <p>There are a few guidelines to follow when taking the Personality Profile.</p>
         <ul>
             <li><b>Be honest - </b>Do not censor your answers. Your first reply is your most accurate.</li>
@@ -210,6 +182,7 @@
         <div class="text-center">
             <span id="begin" class="btn btn-primary">Begin The Assessment</span>
             @if(Session::has('answers'))
+                <br><br>
                 <a class="btn btn-default" href="/{{ $params['organization']->shortname }}/results">
                     <i class="fa fa-list-ul" aria-hidden="true"></i> View Previous Results
                 </a>
@@ -218,16 +191,6 @@
     </div>
     <div id="question"></div>
     <div id="results" style="display:none;"></div>
-
-    <div class="footer navbar-fixed-bottom">
-    	<div class="container-fluid">
-    		<div class="col-xs-12 copyrightbar text-center">
-    			<p>Powered by <a href="https://www.arcchurches.com">ARC</a>
-				&copy; 2000-{{ date('Y') }}. All Rights Reserved</p>
-    		</div>
-    	</div>
-    </div>
-
 
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -239,6 +202,4 @@
       ga('send', 'pageview');
 
     </script>
-
-</body>
-</html>
+@endsection

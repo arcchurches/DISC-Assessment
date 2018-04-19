@@ -12,6 +12,8 @@ use Illuminate\Http\Request;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+Route::get('/'                             , 'TestController@index');
 Route::get('/{shortname}'                  , 'TestController@index');
 Route::post('/results'                     , 'ResultController@post');
 Route::get('/{shortname}/results'          , 'ResultController@index');

@@ -45,3 +45,14 @@ span[data-answer='5'], span[data-answer='5']:hover {
 #question .btn:hover {
     box-shadow: none;
 }
+
+body {
+    position: relative;
+    margin: 0;
+    padding-bottom: 6rem;
+    min-height: 100%;
+}
+
+.footer {
+    position: absolute; bottom: 0; left: 0; right: 0; padding: 1rem; height: 30px;
+}

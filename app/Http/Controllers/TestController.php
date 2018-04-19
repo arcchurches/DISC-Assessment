@@ -8,7 +8,10 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function index($shortname){
+    public function index($shortname = null){
+        if(empty($shortname)){
+            $shortname = getenv('SHORT_NAME');
+        }
         $params['organization'] = Organization::where('shortname', $shortname)->first();
         if(!$params['organization']){
             return view('notfound');
