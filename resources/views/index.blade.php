@@ -154,14 +154,7 @@
 
         });
     </script>
-    <div class="text-center">
-        @if(!empty($params['organization']->logo_url))
-            <img style="max-width: 300px;" src="{{ $params['organization']->logo_url }}">
-        @endif
-        @if(!empty($params['organization']->show_name) && $params['organization']->show_name == 1)
-            <h3>{{ $params['organization']->name }}</h3>
-        @endif
-    </div>
+
     <div id="disc-intro">
         <p><strong>The Personality Profile will help you discover and develop your leadership style.</strong></p>
         <p>It is with your personality that you lead and influence others.</p>

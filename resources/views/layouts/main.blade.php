@@ -26,6 +26,14 @@
     </head>
 
     <body>
+        <div class="header">
+            @if(!empty($params['organization']->logo_url))
+                <img style="max-width: 300px;" src="{{ $params['organization']->logo_url }}">
+            @endif
+            @if(!empty($params['organization']->show_name) && $params['organization']->show_name == 1)
+                <h3>{{ $params['organization']->name }}</h3>
+            @endif
+        </div>
         <div class="container" style="max-width: 900px;">
             @yield('content')
             <div class="footer text-center">

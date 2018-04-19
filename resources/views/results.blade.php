@@ -4,14 +4,6 @@
     <a class="btn btn-default btn-xs pull-right" href="/{{ $params['organization']->shortname }}/">
         <i class="fa fa-angle-double-left" aria-hidden="true"></i> Return
     </a>
-    <div class="text-center">
-        @if(!empty($params['organization']->logo_url))
-            <img style="max-width: 300px;" src="{{ $params['organization']->logo_url }}">
-        @endif
-        @if(!empty($params['organization']->show_name) && $params['organization']->show_name == 1)
-            <h3>{{ $params['organization']->name }}</h3>
-        @endif
-    </div>
     @if(Session::has('alert-success'))
         <div class="alert alert-success">{{ Session::get('alert-success') }}</div>
     @endif
