@@ -7,6 +7,10 @@
 .answer {
     margin:0px 10px;
 }
+.answer.btn {
+    display: block;
+    margin-bottom: 1rem;
+}
 #question h3 {
     min-height:100px;
 }
@@ -54,9 +58,8 @@ body {
 }
 
 .header {
-    padding-top: 15px;
+    padding-top: 25px;
     text-align: center;
-    
 }
 
 .footer {
