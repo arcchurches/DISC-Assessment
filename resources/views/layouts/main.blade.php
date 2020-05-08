@@ -38,7 +38,7 @@
             @yield('content')
             <div class="footer text-center">
                 <p>Powered by <a href="https://www.arcchurches.com">ARC</a>
-                &copy; 2000-{{ date('Y') }}. All Rights Reserved</p>
+                &copy; {{ date('Y') }}. All Rights Reserved</p>
             </div>
         </div>
         <script>
