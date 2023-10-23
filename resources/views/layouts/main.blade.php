@@ -36,10 +36,6 @@
         </div>
         <div class="container" style="max-width: 900px;">
             @yield('content')
-            <div class="footer text-center">
-                <p>Powered by <a href="https://www.arcchurches.com">ARC</a>
-                &copy; {{ date('Y') }}. All Rights Reserved</p>
-            </div>
         </div>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
