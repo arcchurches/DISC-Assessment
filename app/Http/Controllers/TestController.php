@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 
 class TestController extends Controller
 {
-    public function index($shortname = null){
+    public function index(Request $request, $shortname = null){
+        $lang = $request->query('lang');
         if(empty($shortname)){
             $shortname = getenv('SHORT_NAME');
         }
@@ -17,7 +18,12 @@ class TestController extends Controller
             return view('notfound');
         }
         Session::put('organization_id', $params['organization']->id);
-
-        return view('index', ['params' => $params]);
+        if($lang && $lang == 'es'){
+            return view('es', ['params' => $params]);
+        } else if($lang && $lang == 'en'){
+            return view('en', ['params' => $params]);
+        } else {
+            return view('en', ['params' => $params]);
+        }
     }
 }
